@@ -1,0 +1,29 @@
+- El código que ejecutaremos en nuestro servidor será el de la carpeta "dist"
+
+- Solo usaremos el de la carpeta "src" para el entorno de desarrollo 
+
+- Para crear un archivo tsconfig
+  - npx tsc --init
+
+- Para compilar el código corremos el siguiente comando (typescript compiler - tsc)
+  - npx tsc
+  - lo que nos crea una carpeta llamada "dist", la cual podemos borrarla, ya que la podemos generar cuantas veces queramos
+
+- Para eliminar una carpeta independientemente del sistema operativo en el que se corra el proyecto, usaremos la siguiente librería
+  - rimraf
+
+- Para ejecutar el código de NodeJS sin tener que convertirlo, usaremos el modulo de typescript
+  - ts-node
+
+- Para ejecutar nodemon dentro del proyecto
+  - npx nodemon
+
+- Para modificar nuestro CSS de la aplicación de una manera bastante sencilla
+  - getbootstrap.com
+
+- Para usar el framework de bootstrap con colores diferentes
+  - bootswatch.com
+
+- Comando de NODE para copiar carpetas
+  - ncp
+  - este modulo funciona en cualquier sistema operativo
