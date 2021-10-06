@@ -27,14 +27,9 @@ router.route('/').post(async (req: Request, res: Response) => {
   let author = new Author({ name: req.body.name });
   try {
     author = await author.save();
-    // res.send(author);
     res.send({author, message: 'The author was SAVED.'});
 
   } catch (err) {
-    // for (const field in err.errors) {
-    //   // console.log(err.errors[field].message);
-    //   res.send(err.errors[field].message);
-    // }
     res.send('Error to save the author: '+err);
   }
 });
@@ -56,7 +51,6 @@ router.route('/:id').put(validateObjectId, async (req: Request, res: Response) =
   if (!author) {
     return res.status(404).send('The author with the given ID was not found.');
   }
-  // res.send(author);
   res.send({author, message: 'The author was UPDATED.'});
 });
 
@@ -66,7 +60,6 @@ router.route('/:id').delete(validateObjectId, async (req: Request, res: Response
     return res.status(404).send('The author with the given ID was not found.');
   }
 
-  // res.send(author);
   res.send({author, message: 'The author was DELETED.'});
 });
 

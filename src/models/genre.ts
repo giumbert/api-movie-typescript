@@ -1,7 +1,5 @@
 import Joi from 'joi';
 import mongoose from 'mongoose';
-// const Joi = require('joi');
-// const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 const genreSchema = new Schema({
@@ -21,5 +19,3 @@ function validateGenre(genre: any) {
 exports.genreSchema = genreSchema;
 exports.Genre = Genre;
 exports.validate = validateGenre;
-
-// export default Genre;

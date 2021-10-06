@@ -44,13 +44,8 @@ router.route('/').post(async (req: Request, res: Response) => {
     movie = await movie.save();
     res.send({ movie, message: 'The movie was SAVED.' });
   } catch (err) {
-    // for (field in err.errors) {
-    //   res.send(err.errors[field].message);
-    // }
     res.send('Error to save the movie: '+err);
   }
-
-  // res.send(movie);
 });
 
 router.route('/:id').put(async (req: Request, res: Response) => {
@@ -82,7 +77,6 @@ router.route('/:id').put(async (req: Request, res: Response) => {
   if (!movie)
     return res.status(404).send('The movie with the given ID was not found.');
 
-  // res.send(movie);
   res.send({ movie, message: 'The movie was UPDATED.' });
 });
 
@@ -92,7 +86,6 @@ router.route('/:id').delete(async (req: Request, res: Response) => {
   if (!movie)
     return res.status(404).send('The movie with the given ID was not found.');
 
-  // res.send(movie);
   res.send({ movie, message: 'The movie was DELETED.' });
 });
 
